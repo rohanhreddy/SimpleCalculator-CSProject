@@ -47,12 +47,12 @@ While doing so ensure you are in the same directory as the file, or alternativel
 - Integration
 
 
-## Acknowledgements
+## Acknowledgements 💚
 
  - [mpmath](https://mpmath.org/)
  - [SymPy](https://www.sympy.org/en/index.html)
 
-## FAQ
+## FAQ ❓
 
 #### Will this calculator be updated in the future?
 
@@ -67,12 +67,12 @@ Alternatively, my discord is: Rohan_#1379
 #### Can I use a part of this in my own code?
 
 Sure! The open license allows you to use any part in your own code. If you're feeling generous, you can credit me in the acknowledgements 🙂
-## License
+## License ⚖️
 
 [GNU GPL v3.0](https://github.com/rohanhreddy/SimpleCalculator-CSProject/blob/main/LICENSE)
 
 
-## Authors
+## Authors 📝
 
 - [@rohanhreddy](https://github.com/rohanhreddy)
 
