@@ -1,13 +1,17 @@
+#MADE BY ROHAN
+#https://github.com/rohanhreddy/SimpleCalculator-CSProject
+#VERSION 1.0
+
 #importing
 
-from sympy import symbols, limit, cos, sin, tan, cot, sec, csc, diff, integrate, oo, pretty_print
+from sympy import symbols, limit, cos, sin, tan, cot, sec, csc, diff, integrate, oo, pretty_print, Subs
 
 #calculator operations as functions
 
 def add(x = 1, y = 1):
     return (x+y)
 
-def sub(x = 1, y = 1):
+def sube(x = 1, y = 1):
     return (x-y)
 
 def mult(x = 1, y = 1):
@@ -31,10 +35,6 @@ def abs(x = 1):
         return (x)
     else:
         return(x)
-
-def subs(x = 1, y = 1):
-    subeq = sub(x, y)
-    return subeq
 
 def lim(c = 2, x = 1, y = 1, z = 0):
     #x = expression/term
@@ -97,18 +97,15 @@ print("4 - Floor Division (Returns only the Integral Part of the Quotient)")
 print("5 - Modulus (Returns Remainder)")
 print("6 - Exponent (Performs an Exponential Operation on two numbers)")
 print("7 - Absolute Value (Returns Magnitude)")
-print("8 - Algebraic Solver")
-print("9 - Limits (Performs a Limit Operation)")
-print("10 - Differentiation (Performs a Differentiation Operation on a single term)")
-print("11 - Integration (Performs an Integration Operation on a single term)\n")
+print("8 - Limits (Performs a Limit Operation)")
+print("9 - Differentiation (Performs a Differentiation Operation on a single term)")
+print("10 - Integration (Performs an Integration Operation on a single term)\n")
 
 def operations():
     choice = int(input("Choose an operation by entering its preceding number: "))
     return choice
 
-i = 1
-
-while (i == 1):
+while True:
     cho = operations()
     print("Note: The default input value of most of these operations is 1 \n")
     if (cho >= 0) and (cho <= 6):
@@ -120,7 +117,7 @@ while (i == 1):
         elif (cho == 1):
             a1 = float(input("Enter the first number to be subtracted from: "))
             b1 = float(input("Enter the second number to subtract: "))
-            e1 = sub(a1, b1)
+            e1 = sube(a1, b1)
             print("The result is: ", e1, "\n")
         elif (cho == 2):
             a1 = float(input("Enter first number: "))
@@ -147,30 +144,29 @@ while (i == 1):
             b1 = float(input("Enter Exponent: "))
             e1 = exp(a1, b1)
             print("The result is: ", e1, "\n")
-    elif (cho >= 7) and (cho <= 11):
+    elif (cho >= 7) and (cho <= 10):
         if (cho == 7):
             a1 = float(input("Enter Number: "))
             e1 = abs(a1)
             print("The result is: ", e1, "\n")
         elif (cho == 8):
-            a1 = input("Enter Expression in terms of x: ")
-            b1 = float(input("Enter value to substitute with: "))
-            e1 = subs(a1, b1)
-            print("The result is: ", e1, "\n")
-        elif (cho == 9):
             chi = int(input("Enter 0 for Right Hand Limit, 1 for Left Hand Limit and 2 for Evaluating a Limit: "))
             a1 = input("Enter Expression of Limit to be Evaluated: ")
             b1 = input("Enter the primary variable of the limit: ")
             c1 = input("Enter what the primary limit tends to (Note: Use oo (double o) for infinity): ")
             e1 = lim(chi, a1, b1, c1)
-            pretty_print(print("The Limit Evaluates to:", e1))
-        elif (cho == 10): 
+            print("The Limit Evaluates to:")
+            pretty_print(e1)
+            print("\n")
+        elif (cho == 9): 
             a1 = input("Enter expression to be differentiated: ")
             b1 = input("Enter differentiating term/differentiating with respect to: ")
             c1 = int(input("Enter number of times to differentiate (Enter 1 for single differentiation): "))
             e1 = dif(a1, b1, c1)
-            pretty_print(print("The Derivative is:", e1))
-        elif (cho == 11):
+            print("The Derivative is:")
+            pretty_print(e1)
+            print("\n")
+        elif (cho == 10):
             chi = int(input("Enter 0 for integration without limits and 1 for integration with limits: "))
             if (chi == 0):
                 a1 = input("Enter Expression to be Integrated: ")
@@ -184,7 +180,9 @@ while (i == 1):
                 e1 = inte(chi, a1, b1, c1, d1)
             else:
                 print("Invalid Response")
-            pretty_print(print("The Result after Integration is:", e1))
+            print("The Result after Integration is:")
+            pretty_print(e1)
+            print("\n")
     else:
         print("Invalid Response")
         continue
