@@ -87,7 +87,7 @@ def inte(c = 0, x = 1 , y = 1, a = 1, b = 1):
 
 #inputs for operation
 
-print("\nWelcome to a 'Simple' Calculator!\nThis Calculator is completely made in Python and supports 12 different operations!\n")
+print("\nWelcome to a 'Simple' Calculator!\nThis Calculator is completely made in Python and supports 11 different operations!\n")
 print("Use Ctrl+C at any time to exit the calculator\n")
 print("0 - Addition")
 print("1 - Subtraction")
