@@ -31,7 +31,7 @@ While doing so ensure you are in the same directory as the file, or alternativel
     
 ## Features ✨
 
-#### This calculator performs 12 different operations as listed below:
+#### This calculator performs 11 different operations as listed below:
 
 - Addition
 - Subtraction
@@ -41,7 +41,6 @@ While doing so ensure you are in the same directory as the file, or alternativel
 - Modulus (Returns Remainder)
 - Exponent (Performs Exponential Operations)
 - Absolute Value (Returns Magnitude)
-- Algebraic Solver
 - Limits
 - Differentiation
 - Integration
