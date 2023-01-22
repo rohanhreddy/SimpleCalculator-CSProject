@@ -57,7 +57,7 @@ While doing so ensure you are in the same directory as the file, or alternativel
 
 Maybe. I'm not too sure about this as I have plans to work on other projects at the moment.
 
-#### How do I reach out if I have any questions or want to contact you?
+#### How do I reach out if I have any questions or want to report bugs/contact you?
 
 Feel free to reach out to me through my email: woofers_garnets0h[at]icloud[dot]com
 
