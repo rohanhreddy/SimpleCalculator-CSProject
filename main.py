@@ -1,10 +1,10 @@
 #MADE BY ROHAN
 #https://github.com/rohanhreddy/SimpleCalculator-CSProject
-#VERSION 1.0
+#VERSION 1.5.0 (Pre-2.0.0 modifications)
 
 #importing
 
-from sympy import symbols, limit, cos, sin, tan, cot, sec, csc, diff, integrate, oo, pretty_print, Subs
+from sympy import symbols, limit, diff, integrate, oo, pretty_print, latex, sympify
 
 #calculator operations as functions
 
@@ -85,6 +85,23 @@ def inte(c = 0, x = 1 , y = 1, a = 1, b = 1):
     else:
         print("Invalid Response")
 
+#Calculus Operation Warnings
+
+warn = 0
+
+def calcwarn():
+    global warn
+    if (warn == 0):
+        print("\nWarning! Looks like you are attempting to perform calculus operations. Please note that trigonometric functions are NOT supported.")
+        print("Use parenthesis adequately and brace for crashes.")
+        print("Any expressions must be split up using algebra of limits/derivatives/integrals. Example:\n")
+        print("f'(x) = \n")
+        pretty_print(sympify("(x^4) + (x^2)"))
+        print("\nMust be divided into two different expressions that are differentiated seperately.\n")
+        warn = 1
+    else:
+        print("") #empty line
+
 #inputs for operation
 
 print("\nWelcome to a 'Simple' Calculator!\nThis Calculator is completely made in Python and supports 11 different operations!\n")
@@ -97,6 +114,7 @@ print("4 - Floor Division (Returns only the Integral Part of the Quotient)")
 print("5 - Modulus (Returns Remainder)")
 print("6 - Exponent (Performs an Exponential Operation on two numbers)")
 print("7 - Absolute Value (Returns Magnitude)")
+print("\n UNSTABLE OPERATIONS: \n")
 print("8 - Limits (Performs a Limit Operation)")
 print("9 - Differentiation (Performs a Differentiation Operation on a single term)")
 print("10 - Integration (Performs an Integration Operation on a single term)\n")
@@ -107,7 +125,8 @@ def operations():
 
 while True:
     cho = operations()
-    print("Note: The default input value of most of these operations is 1 \n")
+    print("\nNote: To avoid functions crashing due to no user input or user error, a default value of '1' has been assigned to most inputs. This is overridden once a valid input has been provided.\n")
+    e1 = "null"
     if (cho >= 0) and (cho <= 6):
         if (cho == 0):
             a1 = float(input("Enter first number to be added: "))
@@ -150,6 +169,7 @@ while True:
             e1 = abs(a1)
             print("The result is: ", e1, "\n")
         elif (cho == 8):
+            calcwarn()
             chi = int(input("Enter 0 for Right Hand Limit, 1 for Left Hand Limit and 2 for Evaluating a Limit: "))
             a1 = input("Enter Expression of Limit to be Evaluated: ")
             b1 = input("Enter the primary variable of the limit: ")
@@ -159,6 +179,7 @@ while True:
             pretty_print(e1)
             print("\n")
         elif (cho == 9): 
+            calcwarn()
             a1 = input("Enter expression to be differentiated: ")
             b1 = input("Enter differentiating term/differentiating with respect to: ")
             c1 = int(input("Enter number of times to differentiate (Enter 1 for single differentiation): "))
@@ -167,6 +188,7 @@ while True:
             pretty_print(e1)
             print("\n")
         elif (cho == 10):
+            calcwarn()
             chi = int(input("Enter 0 for integration without limits and 1 for integration with limits: "))
             if (chi == 0):
                 a1 = input("Enter Expression to be Integrated: ")

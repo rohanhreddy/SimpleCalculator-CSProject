@@ -1,6 +1,9 @@
 
 # Simple Calculator 🍵
 
+#### Note: Please consider all releases to be beta until version 2.0.0
+#### I cannot guarantee a stable release at the moment
+
 This calculator has been made as a end-of-the-year project for my junior year in high school.
 
 It is made in Python 3 and runs on most compatable sytems and also offers a native .exe file for windows based systems.
